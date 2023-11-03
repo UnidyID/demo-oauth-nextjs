@@ -10,6 +10,6 @@ export const CLIENT_SECRET = process.env.CLIENT_SECRET || raise();
 export const HOST = "https://8b19-78-0-3-98.ngrok-free.app";
 
 // app dir
-// export const CALLBACK_URL = `${HOST}/callback`
+export const CALLBACK_URL = `${HOST}/callback`;
 // pages dir
-export const CALLBACK_URL = `${HOST}/api/callback`;
+export const PAGES_CALLBACK_URL = `${HOST}/api/callback`;
