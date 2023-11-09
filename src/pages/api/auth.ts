@@ -25,5 +25,7 @@ export default async function (
     state: "1234567890",
   });
 
+  // return response.json({ok: true, url: url.toString()});
+
   response.redirect(url);
 }

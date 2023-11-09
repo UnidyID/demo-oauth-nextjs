@@ -7,7 +7,9 @@ export const UNIDY_URL = process.env.UNIDY_URL || raise();
 export const CLIENT_ID = process.env.CLIENT_ID || raise();
 export const CLIENT_SECRET = process.env.CLIENT_SECRET || raise();
 
-export const HOST = "https://8b19-78-0-3-98.ngrok-free.app";
+// export const HOST = "https://8b19-78-0-3-98.ngrok-free.app";
+export const HOST =
+  process.env.HOST || `http://localhost:${process.env.PORT || 3000}`;
 
 // app dir
 export const CALLBACK_URL = `${HOST}/callback`;
