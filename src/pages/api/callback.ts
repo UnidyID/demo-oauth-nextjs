@@ -5,7 +5,7 @@ import {
   CLIENT_ID,
   CLIENT_SECRET,
   UNIDY_URL,
-} from "~/app/config";
+} from "~/app/config.mjs";
 
 export const getClient = async () => {
   const unidyIssuer = await Issuer.discover(UNIDY_URL);

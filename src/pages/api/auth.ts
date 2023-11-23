@@ -1,8 +1,9 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { generators } from "openid-client";
 import { getClient } from "~/pages/api/callback";
-import { SCOPE } from "~/app/config";
+import { SCOPE } from "~/app/config.mjs";
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default async function (
   request: NextApiRequest,
   response: NextApiResponse,

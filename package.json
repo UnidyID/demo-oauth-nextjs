@@ -6,7 +6,8 @@
     "dev": "next dev -p 5001",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "tunnel": "cloudflared tunnel --url http://localhost:5001"
   },
   "dependencies": {
     "next": "14.0.1",
