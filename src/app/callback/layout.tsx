@@ -19,12 +19,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           ReAuth
         </Link>
 
-        <Link
+        <a
           href={UNIDY_URL}
           className="py-2 px-4 bg-orange-600 rounded text-white hover:bg-orange-700"
         >
           App
-        </Link>
+        </a>
       </div>
 
       {children}

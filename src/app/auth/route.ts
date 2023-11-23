@@ -1,6 +1,7 @@
 import { CALLBACK_URL, CLIENT_ID, SCOPE, UNIDY_URL } from "~/app/config.mjs";
 
 export const GET = async (request: Request) => {
+  const data = new URL(request.url).searchParams;
   const url = new URL(`${UNIDY_URL}/oauth/authorize`);
 
   url.searchParams.set("client_id", CLIENT_ID);
@@ -17,7 +18,10 @@ export const GET = async (request: Request) => {
   url.searchParams.set("code_challenge_method", "plain");
 
   // OUR custom thing
-  url.searchParams.set("email", "admin@example.com");
+  const email = data.get("email");
+  if (email) {
+    url.searchParams.set("email", email);
+  }
 
   // return Response.json({
   //   ok: true,
